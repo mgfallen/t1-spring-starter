@@ -1,4 +1,4 @@
-# Spring Boot Starter
+ # Spring Boot Starter
 
 В данном учебном проекте реализовано логирования всех HTTP запросов и ответов в Spring Boot, а также данная логика завернута в отдельный starter.
 
@@ -39,14 +39,14 @@
 ## Конфигурация
 
 Укажите в application.properties необходимый уровень логирования через следующие параметры:
-- http.logging.logRequestMethod=true (default value)
-- http.logging.logRequestUrl=true (default value)
-- http.logging.logRequestHeaders=true (default value)
-- http.logging.logRequestParams=true (default value)
-- http.logging.logResponseHeaders=true (default value) 
-- http.logging.logResponseStatus=true (default value)
-- http.logging.logResponseBody=true (default value)
-- http.logging.logDuration=false (default value)
+- http.logging.logRequestMethod=true (default *true*)
+- http.logging.logRequestUrl=true (default *true*)
+- http.logging.logRequestHeaders=true (default *true*)
+- http.logging.logRequestParams=true (default *true*)
+- http.logging.logResponseHeaders=true (default *true*) 
+- http.logging.logResponseStatus=true (default *true*)
+- http.logging.logResponseBody=true (default *true*)
+- http.logging.logDuration=true (default *true*)
   
 Также можно указать, через какую стратегию вы хотите логировать http запросы с помощью параметра:
 - http.logging.strategy=aspect   (default *filter*; avaible also *aspect* or *interceptor*)
