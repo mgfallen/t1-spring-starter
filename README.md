@@ -49,8 +49,8 @@
 - http.logging.logDuration=false (default value)
   
 Также можно указать, через какую стратегию вы хотите логировать http запросы с помощью параметра:
-- http.logging.strategy=aspect # доступно filter/aspect/interceptor
-- 
+- http.logging.strategy=aspect    # доступно filter/aspect/interceptor
+  
 ## Использование
 
 Укажите в application.properties необходимый уровень логирования через следующие флаги
