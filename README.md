@@ -44,8 +44,18 @@
 ```
 curl localhost:8080
 ```
+Имеем следующую конфигурацию:
 
-Никакие веб-ручки не были установлены, поэтому в ответ закономерно получаем ошибку. Однако видно, что логируется все (был установлен максимальный уровень логирования)
+- http.logging.logRequestMethod=true
+- http.logging.logRequestUrl=true
+- http.logging.logRequestHeaders=true
+- http.logging.logRequestParams=true
+- http.logging.logResponseHeaders=true
+- http.logging.logResponseStatus=true
+- http.logging.logResponseBody=true
+- http.logging.logDuration=true
+
+Входящие запоросы никак не обрабатываются, поэтому в ответ закономерно получаем ошибку. Однако видно, что логируется все (был установлен максимальный уровень логирования)
 
 2024-08-21T11:58:34.565+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.filter.HttpLoggingFilter     : Incoming Request: method=GET uri=/test headers=host=localhost:8080; connection=keep-alive; sec-ch-ua="Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; dnt=1; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7;  queryParams=null
 
