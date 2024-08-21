@@ -55,19 +55,19 @@
 
 Входящие запоросы никак не обрабатываются, поэтому в ответ закономерно получаем ошибку. Однако видно, что логируется все (был установлен максимальный уровень логирования)
 
-2024-08-21T11:58:34.565+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.filter.HttpLoggingFilter     : Incoming Request: method=GET uri=/test headers=host=localhost:8080; connection=keep-alive; sec-ch-ua="Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; dnt=1; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7;  queryParams=null
+2024-08-20T11:58:34.565+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.filter.HttpLoggingFilter     : Incoming Request: method=GET uri=/test headers=host=localhost:8080; connection=keep-alive; sec-ch-ua="Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; dnt=1; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7;  queryParams=null
 
-2024-08-21T11:58:34.569+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.filter.HttpLoggingFilter     : Outgoing Response: status=404 headers=Vary=Origin; Vary=Origin; Vary=Origin;  duration=4ms
+2024-08-20T11:58:34.569+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.filter.HttpLoggingFilter     : Outgoing Response: status=404 headers=Vary=Origin; Vary=Origin; Vary=Origin;  duration=4ms
 
-2024-08-21T11:58:34.570+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.aspect.HttpLoggingAspect     : Incoming Request: method=GET, uri=/error, headers=host=localhost:8080; connection=keep-alive; sec-ch-ua="Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; dnt=1; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7; 
+2024-08-20T11:58:34.570+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.aspect.HttpLoggingAspect     : Incoming Request: method=GET, uri=/error, headers=host=localhost:8080; connection=keep-alive; sec-ch-ua="Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"; sec-ch-ua-mobile=?0; sec-ch-ua-platform="Windows"; dnt=1; upgrade-insecure-requests=1; user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36; accept=text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7; sec-fetch-site=none; sec-fetch-mode=navigate; sec-fetch-user=?1; sec-fetch-dest=document; accept-encoding=gzip, deflate, br, zstd; accept-language=ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7; 
 
-2024-08-21T11:58:34.573+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.aspect.HttpLoggingAspect     : Outgoing Response: status=404, headers=Vary=Origin; Vary=Origin; Vary=Origin; , duration=2ms
+2024-08-20T11:58:34.573+03:00  INFO 13940 --- [starter] [nio-8080-exec-5] t.h.starter.aspect.HttpLoggingAspect     : Outgoing Response: status=404, headers=Vary=Origin; Vary=Origin; Vary=Origin; , duration=2ms
 
 
 - Теперь оставим только логирование методов входящих запросов: http.logging.logRequestMethod=true
 
-2024-08-21T12:15:09.685+03:00  INFO 17936 --- [starter] [nio-8080-exec-2] t.h.starter.filter.HttpLoggingFilter     : Incoming Request: method=GET
-2024-08-21T12:15:09.722+03:00  INFO 17936 --- [starter] [nio-8080-exec-2] t.h.starter.filter.HttpLoggingFilter     : Outgoing Response:
+2024-08-20T12:15:09.685+03:00  INFO 17936 --- [starter] [nio-8080-exec-2] t.h.starter.filter.HttpLoggingFilter     : Incoming Request: method=GET
+2024-08-20T12:15:09.722+03:00  INFO 17936 --- [starter] [nio-8080-exec-2] t.h.starter.filter.HttpLoggingFilter     : Outgoing Response:
 
 
 ## Тестирование
