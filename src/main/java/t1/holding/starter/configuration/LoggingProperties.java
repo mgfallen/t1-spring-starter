@@ -2,9 +2,11 @@ package t1.holding.starter.configuration;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 @ConfigurationProperties(prefix = "http.logging")
 @Data
+@Configuration
 public class LoggingProperties {
     private StrategyLogging strategy = StrategyLogging.FILTER;
 

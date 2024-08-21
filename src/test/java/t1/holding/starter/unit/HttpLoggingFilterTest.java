@@ -22,6 +22,7 @@ public class HttpLoggingFilterTest {
 
     private LoggingProperties loggingProperties;
     private HttpLoggingFilter loggingFilter;
+    // reading logs information from system.out
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     private final PrintStream originalSystemOut = System.out;
 

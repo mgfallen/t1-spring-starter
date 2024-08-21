@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import t1.holding.starter.configuration.LoggingProperties;
 
 import java.io.IOException;
@@ -12,6 +13,7 @@ import java.util.function.Supplier;
 
 
 @Slf4j
+@Component
 public class HttpLoggingFilter implements Filter {
 
     private final LoggingProperties loggingProperties;
