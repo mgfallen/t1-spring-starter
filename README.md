@@ -38,9 +38,7 @@
 
 ## Конфигурация
 
-## Использование
-
-Укажите в application.properties необходимый уровень логирования через следующие флаги
+Укажите в application.properties необходимый уровень логирования через следующие параметры:
 - http.logging.logRequestMethod=true (default value)
 - http.logging.logRequestUrl=true (default value)
 - http.logging.logRequestHeaders=true (default value)
@@ -48,7 +46,14 @@
 - http.logging.logResponseHeaders=true (default value) 
 - http.logging.logResponseStatus=true (default value)
 - http.logging.logResponseBody=true (default value)
-- http.logging.logDuration
+- http.logging.logDuration=false (default value)
+  
+Также можно указать, через какую стратегию вы хотите логировать http запросы с помощью параметра:
+- http.logging.strategy=aspect # доступно filter/aspect/interceptor
+- 
+## Использование
+
+Укажите в application.properties необходимый уровень логирования через следующие флаги
 
 ### Пример логов
 - К примеру, обратимся к веб-серверу томката по адресу localhost:8080 с дефолтным по умолчанию уровнем логирования
