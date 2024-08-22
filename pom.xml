@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>t1.holding</groupId>
-	<artifactId>starter</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>http-logging-starter</artifactId>
+	<version>1.0.0</version>
 	<name>starter</name>
 	<description>starter for http logging</description>
 	<url/>
