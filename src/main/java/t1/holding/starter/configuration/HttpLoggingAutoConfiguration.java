@@ -6,11 +6,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import t1.holding.starter.aspect.HttpLoggingAspect;
 import t1.holding.starter.filter.HttpLoggingFilter;
-import t1.holding.starter.interceptor.HttpLoggingInterceptor;
 
 @Configuration
 @EnableConfigurationProperties(LoggingProperties.class)
@@ -25,22 +21,5 @@ public class HttpLoggingAutoConfiguration {
         registrationBean.addUrlPatterns("/*");
         registrationBean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return registrationBean;
-    }
-
-    @Bean
-    @ConditionalOnProperty(name = "logging.strategy", havingValue = "interceptor")
-    public WebMvcConfigurer loggingInterceptorConfigurer(HttpLoggingInterceptor loggingInterceptor) {
-        return new WebMvcConfigurer() {
-            @Override
-            public void addInterceptors(InterceptorRegistry registry) {
-                registry.addInterceptor(loggingInterceptor);
-            }
-        };
-    }
-
-    @Bean
-    @ConditionalOnProperty(name = "logging.strategy", havingValue = "aop")
-    public HttpLoggingAspect loggingAspect() {
-        return new HttpLoggingAspect();
     }
 }

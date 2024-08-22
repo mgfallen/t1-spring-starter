@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 @Data
 @Configuration
 public class LoggingProperties {
-    private StrategyLogging strategy = StrategyLogging.FILTER;
+    private StrategyLogging strategy = StrategyLogging.ASPECT;
 
     private boolean logRequestMethod = true;
     private boolean logRequestUrl = true;
