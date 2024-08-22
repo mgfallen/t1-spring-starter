@@ -22,11 +22,11 @@
 
 ## Установка
 
-Для использования этого стартер-пакета, добавьте следующую зависимость в ваш `pom.xml`:
+Для использования этого стартер-пакета, добавьте следующую зависимость в ваш `pom.xml` (изменения НЕ залиты в maven central):
 
 ```xml
 <dependency>
-    <groupId>com.example</groupId>
+    <groupId>t1.holding</groupId>
     <artifactId>http-logging-starter</artifactId>
     <version>1.0.0</version>
 </dependency>
